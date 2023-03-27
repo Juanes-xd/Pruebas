@@ -6,7 +6,7 @@
 */
 function bienvenidoSr(persona) {
   // La funcion recibe un objeto "persona".
-  // de la forma: 
+  // de la forma:
   // {
   //  nombre: 'Lionel
   //  apellido: 'Messi',
@@ -22,9 +22,32 @@ function bienvenidoSr(persona) {
   // "Disculpe señor, no está invitado a la fiesta".
   //
   // Tu código:
+  let propiedades = Object.keys(persona);
+  //let valores = Object.values(persona);
 
-};
+  if (
+    propiedades[0] == "nombre" &&
+    propiedades[1] == "apellido" &&
+    propiedades[2]
+  ) {
+    return `${persona.nombre} ${persona.apellido}, un gusto tenerlo nuevamente! Bienvenido`;
+  } else if (
+    propiedades.includes("apellido" && "invitado") == true &&
+    propiedades.includes("nombre") == false
+  ) {
+    return `Bienvenido Sr. ${persona.apellido}`;
+  } else if (
+    propiedades.includes("nombre" && "invitado") == true &&
+    propiedades.includes("apellido") == false
+  ) {
+    return `Hola ${persona.nombre}, tu mesa está lista`;
+  } else {
+    return "Disculpe señor, no está invitado a la fiesta";
+  }
+}
+
+bienvenidoSr({ nombre: "Lionel", apellido: "Messi", invitado: true });
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = bienvenidoSr
+module.exports = bienvenidoSr;

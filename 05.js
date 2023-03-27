@@ -13,9 +13,21 @@ function buscaDestruye(arreglo, num) {
   // Ej: buscaDestruye([1, 2, 3, 4, 1], 1) devuelve => [2, 3, 4]
   //
   // Tu código aca:
-  
-};
+  /** 
+  let pos = [];
+  for (let i = 0; i < arreglo.length; i++) {
+    const element = arreglo[i];
 
+    if (element != num) {
+      pos.push(element);
+    }
+  }
+  return pos;
+  */
+  let filtrados = arreglo.filter((numeros) => numeros != num);
+  return filtrados;
+}
+console.log(buscaDestruye([1, 2, 3, 4, 1], 1));
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscaDestruye
+module.exports = buscaDestruye;
