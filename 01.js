@@ -10,22 +10,17 @@ function mayorMenosMenor(arr) {
   // NOTA: No utilizar los métodos "min" y "max" de "Math".
   //
   // Tu código:
-  let min = arr[0]
-  let max = [0]
-
+  arr.sort((a, b) => a - b);
+  let menor = arr[0];
+  let mayor;
   for (let i = 0; i < arr.length; i++) {
-    if (min > arr[i]) {
-      min = arr[i]
-    }
-    if (max < arr[i]) {
-      max = arr[i]
-    }
-
+    mayor = arr[i];
   }
-  return (max,min)
-};
+  let resta = mayor - menor;
+  return resta;
+}
 mayorMenosMenor([23, 56, 100, 5, 8, 7, 99]);
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = mayorMenosMenor
+module.exports = mayorMenosMenor;
