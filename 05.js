@@ -27,7 +27,7 @@ function buscaDestruye(arreglo, num) {
   let filtrados = arreglo.filter((numeros) => numeros != num);
   return filtrados;
 }
-console.log(buscaDestruye([1, 2, 3, 4, 1], 1));
+buscaDestruye([1, 2, 3, 4, 1], 1);
 // No modifiques nada debajo de esta linea //
 
 module.exports = buscaDestruye;
